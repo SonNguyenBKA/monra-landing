@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import './tailwind.scss';
+@import './variables.scss';
+@import './common.scss';
+@import './element-ui.scss';
+@import './message';
+@import "./animation";
+@import "dialog";
+
+html {
+  background: black;
+}
+* {
+  font-family: "Roboto", sans-serif;
+  @media (min-width: 768px) {
+    font-size: clamp(0.5rem, -0.0714rem + 1.1905vw, 1rem);
+  }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}

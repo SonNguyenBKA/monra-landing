@@ -1,0 +1,138 @@
+{
+  "Home": "Home",
+  "About": "About",
+  "Docs": "Docs",
+  "launch_app": "Launch App",
+  "learn_more": "learn more",
+  "open": "open",
+  "coming_soon": "Coming soon",
+  "section1": {
+    "text_title": "The Eternal Clash of Yin & Yang",
+    "text_des": "Unleash the Power of Destiny"
+  },
+  "section11": {
+    "text_label_1": "Start your own journey in the YiYa Story!",
+    "text_des_1": "Decentralized App",
+    "text_label_2": "Get your early slot for your YiYa NFTs!",
+    "text_des_2": "Investor Page",
+    "text_label_3": "Get your early slot for your YiYa NFTs!",
+    "text_des_3": "Investor Page"
+  },
+  "section2": {
+    "text_title_1": "Two Blind Boxes",
+    "text_title_2": "Two Fates.",
+    "text_des": "Will You Embrace Chaos or Seek Balance ?",
+    "text_btn_1": "The Box of Chaos",
+    "text_btn_2": "The Box of Harmony"
+  },
+  "section3": {
+    "text_title": "Why choose Us?",
+    "text_des_1": "Your New Way to Make Passive Income Online ",
+    "text_des_2": "Open blind box NFTs, trade digital assets, and earn passive income daily!",
+    "text_des_mb": "Your New Way to Make Passive\n        Income Online - Open blind box NFTs, trade digital assets, and earn passive income daily!",
+    "cards": {
+      "text_title_1": "Thrilling Blind Box Experience",
+      "text_des_1": "Unbox mystery NFTs and uncover rare treasures — excitement awaits with every reveal!",
+
+      "text_title_2": "Unlimited Referral Rewards",
+      "text_des_2": "Invite friends, earn commissions, and grow your income as the community expands.",
+
+      "text_title_3": "NFTs That Grow \nin Value",
+      "text_des_3": "Hold NFTs and watch their value increase with each transaction, offering long-term profit potential",
+
+      "text_title_4": "Secure\n& Transparent",
+      "text_des_4": "Powered by blockchain, our platform ensures secure transactions and complete transparency."
+    }
+  },
+  "section4": {
+    "main_title": "Open Mystery NFT Buy, Sell, and Profit in Just 3 Steps!",
+    "text_button": "Join Now and Earn Commissions",
+    "text_desc_sp": "Your New Way to Make Passive Income Online - Open blind box NFTs, trade digital assets, and earn passive income daily!",
+    "card_1": {
+      "text_title": "Sign Up for Free",
+      "text_desc": "Getting started is quick and hassle-free. Create your account in seconds and unlock your journey into the NFT world.",
+      "benefits": {
+        "text_1": "Fast & Easy",
+        "text_2": "No Fees Required",
+        "text_3": "Instant Access"
+      }
+    },
+    "card_2": {
+      "text_title": "Buy & Open Mystery NFTs",
+      "text_desc": "Purchase blind box NFTs to reveal valuable surprises—each box holds the potential for exciting rewards and profitable gains.",
+      "benefits": {
+        "text_1": "Thrilling & Unpredictable",
+        "text_2": "High Profit Potential",
+        "text_3": "Instant Results"
+      }
+    },
+    "card_3": {
+      "text_title": "Trade for Profit",
+      "text_desc": "Resell unopened NFT boxes and earn 9% more per trade—maximizing returns easily, quickly, and with zero risk.",
+      "benefits": {
+        "text_1": "Flexible & Convenient",
+        "text_2": "Smart Trading Strategy",
+        "text_3": "Consistent Growth"
+      }
+    }
+  },
+  "section5": {
+    "main_title": "The Story of YiYa",
+    "start_desc": "In the celestial realms, Yuanshi Tianzun, the great heavenly sage, foresaw an imbalance that could shatter the world. To prevent chaos, he split the Chaos Pearl into two divine forces:",
+    "text_title_1": "Demonic Orb",
+    "text_desc_1": "a force of destruction, wild and untamed.",
+    "text_title_2": "Spirit Pearl",
+    "text_desc_2": "a source of order, pure and divine.",
+    "final_desc_1": "But...",
+    "final_desc_2": "The two orbs fell into the mortal realm, binding themselves to the two souls destined to clash, evolve, and reshape the world.",
+    "final_desc_3": "Will you unlock the Box of Chaos, unleashing fiery wrath?",
+    "final_desc_4": "Or will you open the Box of Harmony, awakening celestial might?",
+    "final_desc_5": "Their fates rest in your hands. Choose wisely."
+  },
+  "section6": {
+    "main_title": "Blind Box NFTs, What Awaits Inside?",
+    "text_title_1": "Open Your Box, Anytime",
+    "text_desc_1": "The Box of Chaos drops in the morning. The Box of Harmony releases in the evening. Choose your time.",
+    "text_title_2": "Fast & Easy Payouts",
+    "text_desc_2": "Withdraw your rewards daily with a minimum payout of just $50 — fast, secure, and convenient via e-wallet or bank transfer.",
+    "text_title_3": "Referral Rewards",
+    "text_desc_3": "Earn commission from your direct referrals and additional rewards from second-level referrals—building a sustainable passive income stream at easy.",
+    "text_title_4": "24/7 Support",
+    "text_desc_4": "Our expert support team is available 24/7 to ensure your experience on YiYa is smooth and successful."
+  },
+  "section7": {
+    "title_1": "Special Launch Offer \n Limited Opportunity!",
+    "des_1": "The first wave of YiYa Blind Boxes is limited. Only 800 early collectors\nwill receive exclusive evolutions and bonus rewards!",
+    "title_2": "Limited NFTs\nfor Early-birds",
+    "des_2": "Claim your YiYa Genesis NFT and gain priority access\nto the future Fusion Event!",
+    "title_3": "Extra Referral Bonus",
+    "des_3": "Invite your first friend and receive bonuses\nStart the earning journey with your friend!"
+  },
+  "section8": {
+    "text_title_1": "Limited-Time Fusion Event: Ultimate Destiny",
+    "text_title_2": "The Fused Form – “YiYa: The Divine Equilibrium”",
+    "text_title_3": "The YiYa Fusion NFT is the rarest and most powerful form in the collection. ",
+    "card_red": {
+      "text_title": "Holders of this exclusive NFT gain",
+      "text_list_1": "A Legendary Status – One of the few to achieve the fusion.",
+      "text_list_2": "Exclusive Rewards – Priority access to future events, airdrops, and secret evolutions.",
+      "text_list_3": "Enhanced Value – The YiYa Fusion NFT is a one-of-a-kind asset in the marketplace."
+    },
+    "card_blue": {
+      "text_title": "Limited-Time Event Rules",
+      "text_list_1": "The Fusion Event lasts for a limited period after the final evolution is released.",
+      "text_list_2": "Once fused, the two separate NFTs are burned, creating the YiYa Fusion NFT.",
+      "text_list_3": "Only a select number of fusions can take place, making it one of the rarest NFTs in the YiYa universe."
+    },
+    "text_des_1": "Will You Keep the Eternal Balance or Unleash the Ultimate Power?",
+    "text_des_2": "The path to fusion is not for everyone—but for those who succeed, a new legend will be born."
+  },
+  "section9": {
+    "follow_yiya": "Follow Yiya",
+    "privacy": "Privacy",
+    "terms": "Terms of use",
+    "choose_your_path_now": "Choose Your Path Now",
+    "text_des": "Two legendary forces await you. Will you command the flames of Nezha or ride the waves of Ao Bing? Open your YiYa Box and start earning online today!",
+    "text_title": "Curious About What’s Inside?"
+  }
+}

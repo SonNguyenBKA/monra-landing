@@ -1,0 +1,25 @@
+.el-message .el-message__badge{
+  display: none !important;
+}
+.el-message__content{
+  @apply flex-1 text-center pr-4 #{!important};
+}
+.el-message{
+  @apply p-2 justify-between min-w-[10rem] max-w-[20rem] rounded-[0.75rem] #{!important};
+}
+
+// success
+.el-message--info{
+  @apply bg-[#FFF] #{!important};
+  border-color: #84F1B6 !important;
+  .el-message__content{
+    @apply text-[#1FC86E] #{!important};
+  }
+  .el-message-icon--info{
+    svg{
+      path{
+        fill: #1FC86E !important;
+      }
+    }
+  }
+}

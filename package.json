@@ -1,0 +1,47 @@
+{
+  "name": "eden-user",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint . --ext .js,.ts,.vue"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.8.1",
+    "@pinia/nuxt": "^0.7.0",
+    "aos": "^2.3.4",
+    "axios": "^1.7.9",
+    "element-plus": "^2.9.0",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "nuxt": "^3.14.1592",
+    "swiper": "^11.2.5",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@element-plus/nuxt": "^1.1.0",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/i18n": "^8.5.6",
+    "@types/aos": "^3.0.7",
+    "@types/js-cookie": "^3.0.6",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.56.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "nuxt-lodash": "^2.5.3",
+    "postcss": "^8.4.33",
+    "sass": "^1.79.3",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vite-plugin-node-polyfills": "^0.22.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+}
