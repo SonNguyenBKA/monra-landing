@@ -11,7 +11,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        play: ['"Play"', 'sans-serif']
       }
     },
     screens: {
@@ -35,5 +34,17 @@ module.exports = {
       ipad: '1025px',
     },
   },
-  plugins: [],
+  plugins: [
+    function ({addComponents}) {
+      addComponents({
+        '.max-w-content': {
+          maxWidth: '79.5rem',
+          paddingLeft: '1rem',
+          paddingRight: '1rem',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        },
+      })
+    }
+  ],
 }

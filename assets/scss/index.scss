@@ -7,6 +7,7 @@
 @import './message';
 @import "./animation";
 @import "dialog";
+@import './aos.scss';
 
 html {
   background: black;
@@ -20,4 +21,8 @@ html {
   @media (max-width: 767px) {
     font-size: 16px;
   }
+}
+
+.max-w-content {
+  @apply max-w-[79.5rem] px-4 mx-auto;
 }

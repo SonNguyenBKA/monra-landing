@@ -18,3 +18,51 @@
     transform: translateY(0px);
   }
 }
+
+.floating-3d {
+  animation: floating-3d 4s ease-in-out infinite;
+}
+
+@keyframes floating-3d {
+  0%, 100% {
+    transform: translateY(0) translateZ(0) rotateX(0deg);
+  }
+  33% {
+    transform: translateY(-16px) translateZ(24px) rotateX(5deg);
+  }
+  66% {
+    transform: translateY(-8px) translateZ(-12px) rotateX(-3deg);
+  }
+}
+
+.floating-breath {
+  animation: floating-breath 4s ease-in-out infinite;
+}
+
+@keyframes floating-breath {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.02);
+  }
+}
+
+.floating-sway {
+  animation: floating-sway 4s ease-in-out infinite;
+}
+
+@keyframes floating-sway {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  50% {
+    transform: translateY(-20px) translateX(0);
+  }
+  75% {
+    transform: translateY(-10px) translateX(-5px);
+  }
+}

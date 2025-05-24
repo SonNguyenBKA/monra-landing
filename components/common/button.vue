@@ -1,42 +1,50 @@
 <template>
   <button class="btn-common" :class="type" :disabled="disabled" @click="emits('submit')">
-    <img v-if="iconLeft" class="size-8" :src="iconLeft" alt="">
-    <span class="btn-common--text uppercase">{{ text }}</span>
+    <span v-if="!!text" class="btn-common--text" :class="classTextBtn">{{ text }}</span>
+    <slot />
   </button>
 </template>
 
 <script setup lang="ts">
-type TBtn = 'gold' | 'silver'
+type TBtn = 'primary' | 'outline'
 defineProps({
   text: { type: String, default: 'text' },
   disabled: { type: Boolean, default: false },
-  iconLeft: { type: Object, default: null },
-  type: { type: String as PropType<TBtn>, default: 'gold' }
+  type: { type: String as PropType<TBtn>, default: 'primary' },
+  classTextBtn: { type: String, default: '' },
 })
 const emits = defineEmits(['submit'])
 </script>
 
 <style lang="scss">
 .btn-common {
-  background-image: url("@/assets/images/common/bg-btn.webp");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  @apply flex px-[2.625rem] py-4 justify-center items-center;
-  @apply gap-2 md:gap-4;
-  transition: all 0.35s linear;
-  &.silver {
-    background-image: url("@/assets/images/common/bg-btn-silver.webp");
+  display: flex;
+  padding: 0.5rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.5rem;
+
+  &--text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 150%;
+    text-transform: capitalize;
+  }
+
+  &.primary {
+    border: 1px solid #0E1318;
+    background: linear-gradient(180deg, #21E7B2 0%, #008A6C 100%);
     .btn-common--text {
-      text-shadow: none;
+      color: #0B1014;
     }
   }
-  &--text {
-    text-shadow: 0px 1px 0px #E6E588;
-    @apply text-black text-center font-normal text-[1rem] md:text-[1.5rem];
-  }
-  &:hover {
-    transform: scale(1.1);
+  &.outline {
+    border: 1px solid #21E7B2;
+    background: linear-gradient(180deg, #0E1318 0%, #2B3238 100%);
+    .btn-common--text {
+      color: #21E7B2;
+    }
   }
 }
 </style>

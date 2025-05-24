@@ -1,6 +1,7 @@
 <template>
-  <div class="page-index overflow-x-hidden">
-
+  <div class="overflow-x-hidden">
+    <home-section-1 />
+    <home-section-2 />
   </div>
 </template>
 

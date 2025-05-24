@@ -1,8 +1,8 @@
 export function useMobile() {
-  const result = ref(+window.innerWidth < 640)
+  const result = ref(+window.innerWidth < 768)
 
   function handleResize() {
-    result.value = +window.innerWidth < 640
+    result.value = +window.innerWidth < 768
   }
 
   onMounted(() => {

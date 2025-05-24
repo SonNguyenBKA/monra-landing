@@ -1,6 +1,18 @@
 <template>
   <header class="header-common">
-
+      <div class="header-common--content">
+        <button class="flex items-center justify-center gap-2 md:gap-4">
+          <img class="size-8 md:size-[3.25rem]" src="@/assets/icons/logo.svg" alt="">
+          <p class="header-common--content__text-logo">MONRA</p>
+        </button>
+        <div class="hidden md:flex items-center justify-center gap-4">
+          <nuxt-link v-for="(link, index) in linkPages" :key="index" :to="link.link" class="link-item" @click="routerLink(link.link, link.coming_soon)">
+            {{ link.name }}
+          </nuxt-link>
+          <common-button text="Launch App" />
+        </div>
+        <common-button class="block md:!hidden " class-text-btn="!text-[1rem]" type="outline" text="Menu" />
+      </div>
   </header>
 </template>
 
@@ -55,6 +67,35 @@ const routerLink = (link: string, coming_soon: boolean) => {
 
 <style lang="scss">
 .header-common {
+ @apply w-full py-4 fixed z-[10];
+  background: rgba(14, 19, 24, 0.80);
+  backdrop-filter: blur(20px);
+  &--content {
+    @apply max-w-content flex items-center justify-between;
+    &__text-logo {
+      color: #FFF;
+      font-weight: 400;
+      text-transform: capitalize;
+      @apply text-[1.5rem] md:text-[2rem] tracking-[0.75rem] md:tracking-[1rem];
+    }
+    .link-item {
+      display: flex;
+      padding: 0.5rem 1rem;
+      justify-content: center;
+      align-items: center;
+      gap: 0.625rem;
+      border-radius: 0.5rem;
+      color: #D0D1D3;
 
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      &.router-link-exact-active {
+        background: #2B3238;
+        color: #D0D1D3;
+      }
+
+    }
+  }
 }
 </style>
