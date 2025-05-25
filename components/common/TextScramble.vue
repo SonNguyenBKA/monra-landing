@@ -14,6 +14,7 @@ const props = defineProps({
       'fontWeight': '700',
       'textTransform': 'lowercase',
       'lineHeight': '120%',
+      'textAlign': 'center',
     })
   }
 })

@@ -23,6 +23,10 @@
   animation: floating-3d 4s ease-in-out infinite;
 }
 
+.floating-3d-reverse {
+  animation: floating-3d 4s ease-in-out reverse infinite;
+}
+
 @keyframes floating-3d {
   0%, 100% {
     transform: translateY(0) translateZ(0) rotateX(0deg);
@@ -64,5 +68,42 @@
   }
   75% {
     transform: translateY(-10px) translateX(-5px);
+  }
+}
+
+
+.aniSpinLeft {
+  animation: spinLeft 20s linear infinite;
+}
+
+.aniSpinRight {
+  animation: spinLeft 20s linear reverse infinite;
+}
+
+@keyframes spinLeft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.aniFadeUpScale {
+  animation: fadeUpScale 5s ease-in-out infinite;
+}
+.aniFadeDownScale {
+  animation: fadeUpScale 5s ease-in-out reverse infinite;
+  animation-delay: 2.5s;
+}
+@keyframes fadeUpScale {
+  0% {
+    transform: translateY(1rem) scale(0.98);
+  }
+  65% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(1rem) scale(0.98);
   }
 }

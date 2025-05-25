@@ -1,7 +1,8 @@
 <template>
-  <div class="overflow-x-hidden">
+  <div class=" flex flex-col hidden-scroll">
     <home-section-1 />
     <home-section-2 />
+    <home-section-3 />
   </div>
 </template>
 

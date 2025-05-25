@@ -22,7 +22,12 @@ html {
     font-size: 16px;
   }
 }
-
+body {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  overflow-x: hidden;
+}
 .max-w-content {
   @apply max-w-[79.5rem] px-4 mx-auto;
 }

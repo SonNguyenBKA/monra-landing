@@ -83,7 +83,7 @@
 
     <div class="layer-4">
       <div class="line-bottom"></div>
-      <img class="size-[1.125rem]" src="@/assets/images/home/section2/bottom.svg" alt="">
+      <img class="size-[2.625rem] md:size-[1.125rem]" src="@/assets/images/home/section2/bottom.svg" alt="">
       <div class="line-bottom rotate-180"></div>
     </div>
   </div>
@@ -97,9 +97,6 @@ const targetElement = ref<HTMLElement | null>(null)
 const { isIntersecting, intersectionRatio } = useInViewport(targetElement, {
   threshold: 0,
   rootMargin: '0px'
-})
-watch(isIntersecting, val => {
-  console.log('Section 2 is in viewport:', val)
 })
 const styleTextScramble = computed(() => {
   return {
@@ -130,18 +127,18 @@ const styleTextScramble = computed(() => {
 
   }
 
-  @media (max-width: 430px) {
-    min-height: 40rem;
-    max-height: 42rem;
-    background-image: linear-gradient(180deg, #0E1318 0%, rgba(14, 19, 24, 0.00) 100%),
-    url('@/assets/images/home/section2/bg-section-2-mb.webp');
-  }
-  @media screen and (min-width: 513px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     min-height: 55rem;
     max-height: 60rem;
     background-image: linear-gradient(180deg, #0E1318 0%, rgba(14, 19, 24, 0.00) 100%),
     url('@/assets/images/home/section2/bg-section-2-mb.webp');
   }
+  //@media screen and (min-width: 513px) and (max-width: 767px) {
+  //  min-height: 55rem;
+  //  max-height: 60rem;
+  //  background-image: linear-gradient(180deg, #0E1318 0%, rgba(14, 19, 24, 0.00) 100%),
+  //  url('@/assets/images/home/section2/bg-section-2-mb.webp');
+  //}
 
   &--content {
     @apply max-w-content h-full relative;
