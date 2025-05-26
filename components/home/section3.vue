@@ -1,35 +1,42 @@
 <template>
   <div class="home-section-3">
-    <template v-if="!isMobile">
+    <div v-show="!isMobile">
       <div class="home-section-3--content">
-        <div class="block-first" ref="targetElement1">
+        <div ref="targetElement1" class="block-first">
           <div class="flex flex-col items-center gap-2">
             <TextScramble
-                v-if="isIntersecting1"
-                class="max-w-[51rem] mx-auto h-[6rem] overflow-hidden"
-                :style="styleText"
-                :phrases="['Two Sigil TYPES. Two Temperaments. One Protocol Watching.']"/>
+              v-if="isIntersecting1"
+              class="max-w-[51rem] mx-auto h-[6rem] overflow-hidden"
+              :style="styleText"
+              :phrases="['Two Sigil TYPES. Two Temperaments. One Protocol Watching.']"
+            />
             <p class="text-[#21E7B2] text-[1.125rem] leading-[120%]">Each day, Monra opens two gates.</p>
           </div>
           <div class="block-first--layer-1">
             <div class="aniFadeUpScale z-[2]">
-              <div class="mirror-sigil component-left-glow flex-shrink-0 mt-[20rem]">
-                <img class="size-[5.5rem]" src="@/assets/images/home/section3/mirror-sigil.webp" alt="">
-                <p class="text-gradient">The Mirror Sigil </p>
-                <div class="line-gradient"/>
-                <p class="text-content">The Mirror Sigil arrives at dawn — bold, impulsive, for those who act before
-                  others even see the move.</p>
+              <div data-aos="fade-up" data-aos-delay="100" class="">
+                <div class="mirror-sigil component-left-glow flex-shrink-0 mt-[20rem]">
+                  <img class="size-[5.5rem]" src="@/assets/images/home/section3/mirror-sigil.webp" alt="">
+                  <p class="text-gradient">The Mirror Sigil </p>
+                  <div class="line-gradient" />
+                  <p class="text-content">
+                    The Mirror Sigil arrives at dawn — bold, impulsive, for those who act before
+                    others even see the move.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="double-sigil z-[2]">
               <img src="@/assets/images/home/section3/double-sigil.webp" alt="">
             </div>
             <div class="aniFadeDownScale z-[2]">
-              <div class="obsibian-sigil component-right-glow flex-shrink-0 mb-[20rem]">
-                <img class="size-[5.5rem]" src="@/assets/images/home/section3/obsibian-sigil.webp" alt="">
-                <p class="text-gradient">The Obsidian Sigil </p>
-                <div class="line-gradient"/>
-                <p class="text-content">The Obsidian Sigil appears at dusk — quiet, strategic, rewarding patience and precision.</p>
+              <div data-aos="fade-down" data-aos-delay="100" class="">
+                <div class="obsibian-sigil component-right-glow flex-shrink-0 mb-[20rem]">
+                  <img class="size-[5.5rem]" src="@/assets/images/home/section3/obsibian-sigil.webp" alt="">
+                  <p class="text-gradient">The Obsidian Sigil </p>
+                  <div class="line-gradient" />
+                  <p class="text-content">The Obsidian Sigil appears at dusk — quiet, strategic, rewarding patience and precision.</p>
+                </div>
               </div>
             </div>
 
@@ -39,47 +46,47 @@
             <div class="layer-circle-obsibian aniSpinRight">
               <img src="@/assets/images/home/section3/circle-obsibian.webp" alt="">
             </div>
-
           </div>
         </div>
-        <div class="block-second" ref="targetElement2">
-          <div class="line-gradient"></div>
-          <div class="block-second--content">
-            <div class="flex flex-col gap-6 max-w-[60rem]">
-              <div class="line-gradient"></div>
-              <p class="text-gradient">Both sigils are priced differently. Both may carry something more. But only a few will contain the artifact
-                — a hidden key to what lies beyond the surface.</p>
-              <p class="text-gradient">Choose by instinct. Choose by calculation. Or choose both. What matters is not just what you receive — but
-                how you’re seen.</p>
-              <div class="line-gradient"></div>
+        <div ref="targetElement2" class="!mt-[3.25rem] !mb-[5.5rem]">
+          <BlurText>
+            <div class="flex flex-col justify-center items-center gap-3">
+              <p class="text-gradient-blur">
+                Both sigils are priced differently. Both may carry something more. But only a few will contain the artifact
+                — a hidden key to what lies beyond the surface.
+              </p>
+              <p class="text-gradient-blur">
+                Choose by instinct. Choose by calculation. Or choose both. What matters is not just what you receive — but
+                how you’re seen.
+              </p>
             </div>
-          </div>
-          <div class="line-gradient"></div>
+          </BlurText>
         </div>
         <div class="block-third">
           <div class="flex flex-col items-center gap-2">
             <TextScramble
-                v-if="isIntersecting2"
-                class="max-w-[60rem] mx-auto h-[3.2rem] overflow-hidden"
-                :style="styleText"
-                :phrases="['Patterns Are Watched. Timing Is Noticed.']"/>
+              v-if="isIntersecting2"
+              class="max-w-[60rem] mx-auto h-[3.2rem] overflow-hidden"
+              :style="styleText"
+              :phrases="['Patterns Are Watched. Timing Is Noticed.']"
+            />
             <p class="text-[#21E7B2] text-[1.125rem] leading-[120%]">Each day, Monra opens two gates.</p>
           </div>
           <swiper
-              class="mt-[2.625rem]"
-              :centered-slides="true"
-              :loop="true"
-              :speed="1000"
-              :autoplay="{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }"
-              :effect="'coverflow'"
-              :coverflowEffect="{
+            class="mt-[2.625rem]"
+            :centered-slides="true"
+            :loop="true"
+            :speed="1000"
+            :autoplay="{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }"
+            :effect="'coverflow'"
+            :coverflow-effect="{
               rotate: -5,
               stretch: -25,
               depth: 100,
               modifier: 2.5,
               slideShadows: false,
             }"
-              :breakpoints="{
+            :breakpoints="{
               320: {
                 slidesPerView: 1,
                 spaceBetween: 16,
@@ -93,15 +100,15 @@
                 loop: true,
               },
             }"
-              :pagination="{ clickable: true }"
-              :modules="[EffectCoverflow, Autoplay]"
-              @swiper="onSwiper"
-              @slide-change="onSwiper"
+            :pagination="{ clickable: true }"
+            :modules="[EffectCoverflow, Autoplay]"
+            @swiper="onSwiper"
+            @slide-change="onSwiper"
           >
             <swiper-slide
-                v-for="(card, index) in [...listCard, ...listCard, ...listCard]"
-                :key="index"
-                @click="onSlideClick(index)"
+              v-for="(card, index) in [...listCard, ...listCard, ...listCard]"
+              :key="index"
+              @click="onSlideClick(index)"
             >
               <CartItemSection3 :data="card" />
             </swiper-slide>
@@ -109,22 +116,23 @@
         </div>
       </div>
       <div class="layer-4">
-        <div class="line-bottom"></div>
+        <div class="line-bottom" />
         <img class="size-[2.625rem] md:size-[1.125rem]" src="@/assets/images/home/section2/bottom.svg" alt="">
-        <div class="line-bottom rotate-180"></div>
+        <div class="line-bottom rotate-180" />
       </div>
-    </template>
-    <template v-else>
+    </div>
+    <div v-show="isMobile">
       <div class="home-section-3--content-mb">
-        <div class="py-4" ref="targetElement3">
+        <div ref="targetElement3" class="py-4">
           <div class="flex flex-col items-center gap-2">
             <TextScramble
-                class="max-w-[51rem] px-4 mx-auto h-[5.5rem] sm:min-h-[3.5rem] overflow-hidden"
-                :style="styleText"
-                :phrases="['Two Sigil TYPES. Two Temperaments. One Protocol Watching.']"/>
+              v-if="isIntersecting3"
+              class="max-w-[51rem] px-4 mx-auto h-[5.5rem] sm:min-h-[3.5rem] overflow-hidden"
+              :style="styleText"
+              :phrases="['Two Sigil TYPES. Two Temperaments. One Protocol Watching.']"
+            />
             <p class="text-[#21E7B2] text-[0.875rem] leading-[120%]">Each day, Monra opens two gates.</p>
           </div>
-
         </div>
         <div class="layer-mb-1">
           <div class="layer-mb-1--img1">
@@ -138,7 +146,7 @@
               <img class="size-[2.625rem]" src="@/assets/images/home/section3/obsibian-sigil.webp" alt="">
               <p class="text-gradient">The Obsidian Sigil</p>
             </div>
-            <div class="line-gradient"></div>
+            <div class="line-gradient" />
             <p class="text-content">The Obsidian Sigil appears at dusk — quiet, strategic, rewarding patience and precision.</p>
           </div>
         </div>
@@ -154,87 +162,86 @@
               <img class="size-[2.625rem]" src="@/assets/images/home/section3/mirror-sigil.webp" alt="">
               <p class="text-gradient">The Mirror Sigil </p>
             </div>
-            <div class="line-gradient"></div>
+            <div class="line-gradient" />
             <p class="text-content">The Mirror Sigil arrives at dawn — bold, impulsive, for those who act before others even see the move.</p>
           </div>
         </div>
-        <div class="block-second-mb">
-          <div class="line-gradient mt-2"></div>
-          <div class="block-second-mb--content">
-            <div class="flex flex-col items-center justify-center gap-2 max-w-[60rem]">
-              <div class="line-gradient"></div>
-              <p class="text-gradient text-center">Both sigils are priced differently. Both may carry something more. But only a few will contain the artifact
-                — a hidden key to what lies beyond the surface.</p>
-              <p class="text-gradient text-center">Choose by instinct. Choose by calculation. Or choose both. What matters is not just what you receive — but
-                how you’re seen.</p>
-              <div class="line-gradient"></div>
-            </div>
+        <BlurText>
+          <div class="flex flex-col justify-center items-center gap-1 md:gap-3">
+            <p class="text-gradient-blur">
+              Both sigils are priced differently. Both may carry something more. But only a few will contain the artifact
+              — a hidden key to what lies beyond the surface.
+            </p>
+            <p class="text-gradient-blur">
+              Choose by instinct. Choose by calculation. Or choose both. What matters is not just what you receive — but
+              how you’re seen.
+            </p>
           </div>
-          <div class="line-gradient"></div>
-        </div>
-        <div class="py-4" ref="targetElement3">
+        </BlurText>
+        <div ref="targetElement4" class="py-4">
           <div class="flex flex-col items-center gap-2">
             <TextScramble
-                class="max-w-[51rem] px-4 mx-auto min-h-[3.5rem] overflow-hidden"
-                :style="styleText"
-                :phrases="['Patterns Are Watched. Timing Is Noticed.']"/>
+              v-if="isIntersecting4"
+              class="max-w-[51rem] px-4 mx-auto min-h-[3.5rem] overflow-hidden"
+              :style="styleText"
+              :phrases="['Patterns Are Watched. Timing Is Noticed.']"
+            />
             <p class="text-[#21E7B2] text-[0.875rem] leading-[120%]">Each day, Monra opens two gates.</p>
           </div>
-
         </div>
         <swiper
-            class="mt-4 mb-[3rem]"
-            :centered-slides="true"
-            :loop="true"
-            :speed="1000"
-            :autoplay="{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }"
-            :effect="'coverflow'"
-            :coverflowEffect="{
-              rotate: -5,
-              stretch: -25,
-              depth: 100,
-              modifier: 2.5,
-              slideShadows: false,
-            }"
-            :breakpoints="{
-              320: {
-                slidesPerView: 1.5,
-                spaceBetween: -8,
-                centeredSlides: true,
-                loop: true,
-              },
-              430: {
-                slidesPerView: 2,
-                spaceBetween: -8,
-                centeredSlides: true,
-                loop: true,
-              },
-            }"
-            :pagination="{ clickable: true }"
-            :modules="[EffectCoverflow, Autoplay]"
-            @swiper="onSwiper"
-            @slide-change="onSwiper"
+          class="mt-4 mb-[3rem]"
+          :centered-slides="true"
+          :loop="true"
+          :speed="1000"
+          :autoplay="{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }"
+          :effect="'coverflow'"
+          :coverflow-effect="{
+            rotate: -5,
+            stretch: -25,
+            depth: 100,
+            modifier: 2.5,
+            slideShadows: false,
+          }"
+          :breakpoints="{
+            320: {
+              slidesPerView: 1.5,
+              spaceBetween: -8,
+              centeredSlides: true,
+              loop: true,
+            },
+            430: {
+              slidesPerView: 2,
+              spaceBetween: -8,
+              centeredSlides: true,
+              loop: true,
+            },
+          }"
+          :pagination="{ clickable: true }"
+          :modules="[EffectCoverflow, Autoplay]"
+          @swiper="onSwiper"
+          @slide-change="onSwiper"
         >
           <swiper-slide
-              v-for="(card, index) in [...listCard, ...listCard, ...listCard]"
-              :key="index"
-              @click="onSlideClick(index)"
+            v-for="(card, index) in [...listCard, ...listCard, ...listCard]"
+            :key="index"
+            @click="onSlideClick(index)"
           >
             <CartItemSection3 :data="card" />
           </swiper-slide>
         </swiper>
         <div class="layer-4">
-          <div class="line-bottom"></div>
+          <div class="line-bottom" />
           <img class="size-[2.625rem] md:size-[1.125rem]" src="@/assets/images/home/section2/bottom.svg" alt="">
-          <div class="line-bottom rotate-180"></div>
+          <div class="line-bottom rotate-180" />
         </div>
       </div>
-    </template>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { EffectCoverflow, Autoplay} from 'swiper/modules'
+import { EffectCoverflow, Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -244,28 +251,38 @@ import cart1 from '@/assets/images/home/section3/cart-item-1.webp'
 import cart2 from '@/assets/images/home/section3/cart-item-2.webp'
 import cart3 from '@/assets/images/home/section3/cart-item-3.webp'
 
-import TextScramble from "~/components/common/TextScramble.vue";
-import CartItemSection3 from "~/components/page/home/section3/cart-item.vue";
-
+import TextScramble from '~/components/common/TextScramble.vue'
+import CartItemSection3 from '~/components/page/home/section3/cart-item.vue'
+import BlurText from '~/components/common/blur-text.vue'
 
 const styleText = computed(() => {
   return {
-    'color1': '#FFF',
-    'color2': '#B9BBBD',
-    'fontSize': !isMobile.value ? '2.625rem' : '1.5rem',
-    'fontWeight': '700',
-    'textTransform': 'uppercase',
-    'lineHeight': '120%',
-    'textAlign': 'center'
+    color1: '#FFF',
+    color2: '#B9BBBD',
+    fontSize: !isMobile.value ? '2.625rem' : '1.5rem',
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    lineHeight: '120%',
+    textAlign: 'center'
   }
 })
-const targetElement1 = ref()
-const targetElement2 = ref()
-const { isIntersecting: isIntersecting1  } = useInViewport(targetElement1, {
+const targetElement1 = ref<HTMLElement | null>()
+const targetElement2 = ref<HTMLElement | null>()
+const targetElement3 = ref<HTMLElement | null>()
+const targetElement4 = ref<HTMLElement | null>()
+const { isIntersecting: isIntersecting1 } = useInViewport(targetElement1, {
   threshold: 0,
   rootMargin: '0px'
 })
 const { isIntersecting: isIntersecting2 } = useInViewport(targetElement2, {
+  threshold: 0,
+  rootMargin: '0px'
+})
+const { isIntersecting: isIntersecting3 } = useInViewport(targetElement3, {
+  threshold: 0,
+  rootMargin: '0px'
+})
+const { isIntersecting: isIntersecting4 } = useInViewport(targetElement4, {
   threshold: 0,
   rootMargin: '0px'
 })
@@ -277,18 +294,18 @@ const listCard = [
   {
     image: cart1,
     title: 'Fixed mint price. Limited supply',
-    content: 'Each session offers a set number of sigils at a fixed price. Once a cycle ends, that supply is permanently closed — no re-entries, no rerolls.',
+    content: 'Each session offers a set number of sigils at a fixed price. Once a cycle ends, that supply is permanently closed — no re-entries, no rerolls.'
   },
   {
     image: cart2,
     title: 'Auto-markup resale',
-    content: 'After each session, unsold sigils can be relisted in the next drop window at a higher system-defined price — ensuring early participants benefit as demand rises.',
+    content: 'After each session, unsold sigils can be relisted in the next drop window at a higher system-defined price — ensuring early participants benefit as demand rises.'
   },
   {
     image: cart3,
     title: 'Session-based trading',
-    content: 'Sigils can only be resold in the following matching session (AM or PM), not the one in which they were minted.\n',
-  },
+    content: 'Sigils can only be resold in the following matching session (AM or PM), not the one in which they were minted.\n'
+  }
 ]
 
 const onSwiper = (swiper: any) => {
@@ -400,40 +417,6 @@ const nextSwiper = () => {
         width: 100%;
         height: 0.0625rem;
         background: linear-gradient(270deg, rgba(126, 210, 255, 0.00) 0%, #D0EFFF 50%, rgba(126, 210, 255, 0.00) 100%);
-      }
-    }
-
-    .block-second {
-      @apply mt-[3.25rem] mb-[5.5rem];
-      background: linear-gradient(90deg, rgba(14, 19, 24, 0.00) 0%, #0E1318 50%, rgba(14, 19, 24, 0.00) 100%);
-      backdrop-filter: blur(20px);
-
-      &--content {
-        @apply flex flex-col justify-center items-center py-4;
-        .line-gradient {
-          @apply w-full h-[1px];
-          background-image: linear-gradient(90deg, #0E1318 0%, #0E1318 50%, #0E1318 100%);
-        }
-        &__core  {
-
-        }
-        .text-gradient {
-          text-align: center;
-          font-size: 1.125rem;
-          font-weight: 400;
-          line-height: 130%;
-          text-transform: capitalize;
-
-          background: linear-gradient(90deg, #A28C6F 0%, #F7F5EE 100%);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      }
-      .line-gradient {
-        width: 100%;
-        height: 0.0625rem;
-        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #A28C6F 50%, rgba(162, 140, 111, 0) 100%);
       }
     }
   }
@@ -556,7 +539,19 @@ const nextSwiper = () => {
       }
     }
   }
+  .text-gradient-blur {
+    text-align: center;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: capitalize;
+    background: linear-gradient(90deg, #A28C6F 0%, #F7F5EE 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply text-[0.875rem] md:text-[1.125rem];
+  }
 }
+
 
 .component-left-glow {
   width: 100%;

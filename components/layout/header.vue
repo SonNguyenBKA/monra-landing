@@ -67,7 +67,7 @@ const routerLink = (link: string, coming_soon: boolean) => {
 
 <style lang="scss">
 .header-common {
- @apply w-full py-4 fixed z-[10];
+ @apply w-full py-4 fixed z-[20];
   background: rgba(14, 19, 24, 0.80);
   backdrop-filter: blur(20px);
   &--content {
