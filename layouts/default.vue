@@ -3,6 +3,7 @@
     <client-only>
       <LayoutHeader />
       <slot />
+      <LayoutFooter />
     </client-only>
   </section>
 </template>

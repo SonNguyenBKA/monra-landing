@@ -5,13 +5,14 @@
   @apply flex-1 text-center pr-4 #{!important};
 }
 .el-message{
-  @apply p-2 justify-between min-w-[10rem] max-w-[20rem] rounded-[0.75rem] #{!important};
+  @apply px-4 py-3 justify-between min-w-[10rem] max-w-[20rem] #{!important};
 }
 
 // success
 .el-message--info{
   @apply bg-[#FFF] #{!important};
   border-color: #84F1B6 !important;
+  border-radius: 0.125rem !important;
   .el-message__content{
     @apply text-[#1FC86E] #{!important};
   }

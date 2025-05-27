@@ -11,6 +11,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+      },
+      fontSize: {
+        'label-12-semi': [
+          '0.75rem',
+          {
+            fontWeight: 600,
+            lineHeight: '150%'
+          }
+        ]
       }
     },
     screens: {
@@ -29,7 +38,7 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
       '3xl': '1920px',
       // => @media (min-width: 1920px) { ... }
-      mobile: { max: '786px' },
+      mobile: { max: '767px' },
       'mobile-sm': { max: '375px' },
       ipad: '1025px',
     },
