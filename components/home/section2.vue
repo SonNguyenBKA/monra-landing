@@ -115,7 +115,7 @@ const styleTextScramble = computed(() => {
 <style lang="scss">
 .home-section-2 {
   width: 100%;
-  height: 100dvh;
+  height: 100svh;
   min-height: 50rem;
   background-image: url('@/assets/images/home/section2/bg-section-2.webp');
   background-size: 100% 100%;

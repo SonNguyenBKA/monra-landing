@@ -6,7 +6,7 @@
           <div class="flex flex-col items-center gap-2">
             <TextScramble
               v-if="isIntersecting1"
-              class="max-w-[51rem] mx-auto h-[6rem] overflow-hidden"
+              class="max-w-[51rem] mx-auto"
               :style="styleText"
               :phrases="['Two Sigil TYPES. Two Temperaments. One Protocol Watching.']"
             />
@@ -66,7 +66,7 @@
           <div class="flex flex-col items-center gap-2">
             <TextScramble
               v-if="isIntersecting2"
-              class="max-w-[60rem] mx-auto h-[3.2rem] overflow-hidden"
+              class="max-w-[60rem] mx-auto"
               :style="styleText"
               :phrases="['Patterns Are Watched. Timing Is Noticed.']"
             />
@@ -127,7 +127,7 @@
           <div class="flex flex-col items-center gap-2">
             <TextScramble
               v-if="isIntersecting3"
-              class="max-w-[51rem] px-4 mx-auto h-[5.5rem] sm:min-h-[3.5rem] overflow-hidden"
+              class="max-w-[51rem] px-4 mx-auto"
               :style="styleText"
               :phrases="['Two Sigil TYPES. Two Temperaments. One Protocol Watching.']"
             />
@@ -182,7 +182,7 @@
           <div class="flex flex-col items-center gap-2">
             <TextScramble
               v-if="isIntersecting4"
-              class="max-w-[51rem] px-4 mx-auto min-h-[3.5rem] overflow-hidden"
+              class="max-w-[51rem] px-4 mx-auto"
               :style="styleText"
               :phrases="['Patterns Are Watched. Timing Is Noticed.']"
             />

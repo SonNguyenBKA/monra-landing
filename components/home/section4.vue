@@ -154,7 +154,7 @@ const { isIntersecting: isIntersecting4 } = useInViewport(targetElement4, {
   background-repeat: no-repeat;
 
   width: 100%;
-  min-height: 100dvh;
+  min-height: 100svh;
   background-image: url("@/assets/images/home/section4/bg-section-4.webp");
   background-size: cover;
   @media screen and (max-width: 767px) {

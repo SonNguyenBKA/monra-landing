@@ -28,7 +28,7 @@ const isMobile = useMobile()
 <style lang="scss">
 .home-section-1 {
   width: 100%;
-  height: 100dvh;
+  height: 100svh;
   min-height: 55rem;
   //max-height: 60rem;
   background-image: url('@/assets/images/home/bg-section-1.webp');

@@ -1,159 +1,164 @@
 <template>
-  <div ref="textElement" class="text-scramble"></div>
+  <div class="wrapper-text-scramble">
+    <p class="text-scramble opacity-0">{{phrases[0]}}</p>
+    <div ref="textElement" class="text-scramble absolute top-0"></div>
+  </div>
 </template>
 
 <script setup>
 const props = defineProps({
-  phrases: {type: Array, default: () => ['Text demo']},
-  loop: {type: Boolean, default: false},
+  phrases: { type: Array, default: () => ['Text demo'] },
+  loop: { type: Boolean, default: false },
   style: {
-    type: Object, default: () => ({
-      'color1': '#000',
-      'color2': '#fff',
-      'fontSize': '2.625rem',
-      'fontWeight': '700',
-      'textTransform': 'lowercase',
-      'lineHeight': '120%',
-      'textAlign': 'center',
+    type: Object,
+    default: () => ({
+      color1: '#000',
+      color2: '#fff',
+      fontSize: '2.625rem',
+      fontWeight: '700',
+      textTransform: 'lowercase',
+      lineHeight: '120%',
+      textAlign: 'center'
     })
   }
 })
 const textElement = ref()
 
 class TextScramble {
-  constructor(el) {
-    this.el = el;
-    this.chars = '!<>-_\\/[]{}—=+*^?#________';
-    this.update = this.update.bind(this);
+  constructor (el) {
+    this.el = el
+    this.chars = '!<>-_\\/[]{}—=+*^?#________'
+    this.update = this.update.bind(this)
   }
 
-  setText(newText) {
+  setText (newText) {
     // Chia text thành các dòng
-    const lines = newText.split('\n');
-    const oldLines = this.getCurrentLines();
-    const maxLines = Math.max(lines.length, oldLines.length);
+    const lines = newText.split('\n')
+    const oldLines = this.getCurrentLines()
+    const maxLines = Math.max(lines.length, oldLines.length)
 
-    const promise = new Promise((resolve) => this.resolve = resolve);
-    this.queue = [];
+    const promise = new Promise(resolve => this.resolve = resolve)
+    this.queue = []
 
     // Xử lý từng dòng một cách độc lập
     for (let lineIndex = 0; lineIndex < maxLines; lineIndex++) {
-      const oldLine = oldLines[lineIndex] || '';
-      const newLine = lines[lineIndex] || '';
-      const maxLength = Math.max(oldLine.length, newLine.length);
+      const oldLine = oldLines[lineIndex] || ''
+      const newLine = lines[lineIndex] || ''
+      const maxLength = Math.max(oldLine.length, newLine.length)
 
-      const lineQueue = [];
+      const lineQueue = []
       for (let i = 0; i < maxLength; i++) {
-        const from = oldLine[i] || '';
-        const to = newLine[i] || '';
-        const start = Math.floor(Math.random() * 200);
-        const end = start + Math.floor(Math.random() * 200);
-        lineQueue.push({from, to, start, end});
+        const from = oldLine[i] || ''
+        const to = newLine[i] || ''
+        const start = Math.floor(Math.random() * 50)
+        const end = start + Math.floor(Math.random() * 50)
+        lineQueue.push({ from, to, start, end })
       }
 
-      this.queue.push(lineQueue);
+      this.queue.push(lineQueue)
     }
 
-    cancelAnimationFrame(this.frameRequest);
-    this.frame = 0;
-    this.update();
-    return promise;
+    cancelAnimationFrame(this.frameRequest)
+    this.frame = 0
+    this.update()
+    return promise
   }
 
-  getCurrentLines() {
-    const lines = [];
-    const lineElements = this.el.querySelectorAll('.text-line');
-    lineElements.forEach(line => {
-      lines.push(line.textContent || '');
-    });
-    return lines;
+  getCurrentLines () {
+    const lines = []
+    const lineElements = this.el.querySelectorAll('.text-line')
+    lineElements.forEach((line) => {
+      lines.push(line.textContent || '')
+    })
+    return lines
   }
 
-  update() {
-    let output = '';
-    let totalComplete = 0;
-    let totalChars = 0;
+  update () {
+    let output = ''
+    let totalComplete = 0
+    let totalChars = 0
 
     for (let lineIndex = 0; lineIndex < this.queue.length; lineIndex++) {
-      const lineQueue = this.queue[lineIndex];
-      let lineOutput = '';
-      let lineComplete = 0;
+      const lineQueue = this.queue[lineIndex]
+      let lineOutput = ''
+      let lineComplete = 0
 
       for (let i = 0; i < lineQueue.length; i++) {
-        let {from, to, start, end, char} = lineQueue[i];
-        totalChars++;
+        let { from, to, start, end, char } = lineQueue[i]
+        totalChars++
 
         if (this.frame >= end) {
-          lineComplete++;
-          totalComplete++;
-          lineOutput += to;
+          lineComplete++
+          totalComplete++
+          lineOutput += to
         } else if (this.frame >= start) {
           if (!char || Math.random() < 0.28) {
-            char = this.randomChar();
-            lineQueue[i].char = char;
+            char = this.randomChar()
+            lineQueue[i].char = char
           }
-          lineOutput += `<span class="dud">${char}</span>`;
+          lineOutput += `<span class="dud">${char}</span>`
         } else {
-          lineOutput += from;
+          lineOutput += from
         }
       }
 
       // Chỉ hiển thị dòng nếu có nội dung hoặc đang trong quá trình scramble
       if (lineOutput.trim() || lineComplete < lineQueue.length) {
-        output += `<span class="text-line">${lineOutput}</span>`;
+        output += `<span class="text-line">${lineOutput}</span>`
       }
     }
 
-    this.el.innerHTML = output;
+    this.el.innerHTML = output
 
     if (totalComplete === totalChars) {
-      this.resolve();
+      this.resolve()
     } else {
-      this.frameRequest = requestAnimationFrame(this.update);
-      this.frame++;
+      this.frameRequest = requestAnimationFrame(this.update)
+      this.frame++
     }
   }
 
-  randomChar() {
-    return this.chars[Math.floor(Math.random() * this.chars.length)];
+  randomChar () {
+    return this.chars[Math.floor(Math.random() * this.chars.length)]
   }
 }
 
-let fx = null;
-let counter = 0;
+let fx = null
+let counter = 0
 
 const next = () => {
   fx.setText(props.phrases[counter]).then(() => {
     if (props.loop) {
-      setTimeout(next, 2000);
+      setTimeout(next, 2000)
     }
-  });
-  counter = (counter + 1) % props.phrases.length;
-};
+  })
+  counter = (counter + 1) % props.phrases.length
+}
 
 onMounted(() => {
-  fx = new TextScramble(textElement.value);
-  next();
+  fx = new TextScramble(textElement.value)
+  next()
 
   // Thêm tương tác click để chuyển phrase
   document.addEventListener('click', () => {
-    counter = (counter + 1) % props.phrases.length;
-    fx.setText(props.phrases[counter]);
-  });
-});
+    counter = (counter + 1) % props.phrases.length
+    fx.setText(props.phrases[counter])
+  })
+})
 </script>
 
 <style scoped>
+.wrapper-text-scramble {
+  position: relative;
+}
 .text-scramble {
   text-align: v-bind(style.textAlign);
   word-wrap: break-word;
   line-height: v-bind(style.lineHeight);
 
-
   font-size: v-bind(style.fontSize);
   font-weight: v-bind(style.fontWeight);
   text-transform: v-bind(style.textTransform);
-
 
   background: linear-gradient(90deg, v-bind(style.color1) 0%, v-bind(style.color2) 100%);
   background-clip: text;
